@@ -2,24 +2,32 @@
     box-sizing: border-box;
 }
 
-body {
+/*body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column;  
     width: 100%;
-}
+    height: 100%;
+}  */
 
 .contact-form {
+    font-family: 'Raleway', sans-serif;
     background-image: url(../img/img.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover cover;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
     height: 100vh;
     padding: 100px 0 0;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: #262626;
 }
 
 header .section-title {
@@ -35,18 +43,22 @@ header p{
     font-size: 17px;
     color: #262626;
     margin-bottom: 45px;
+    line-height: 25px;
 }
 
 .contact-block {
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 100%;
+    height: calc(100vh - 90px);
 }
 
 form {
     display: flex;
     flex-direction: column;
+}
+
+.form {
     margin-right: 85px;
 }
 
@@ -64,9 +76,15 @@ form input {
 form input {
     height: 50px;
 }
-
-form input:first-child {
+form textarea:focus,
+form input:focus {
     opacity: 1;
+    border-left: 5px solid #355b82;
+    transition: .3s;
+}
+
+form textarea {
+    padding: 20px 20px;
 }
 
 .contact-info {
@@ -108,13 +126,50 @@ input:-ms-input-placeholder {
     color: white !important;
 }
 
+textarea::-webkit-input-placeholder {
+    color: white !important;
+}
+
+textarea:-moz-placeholder {
+    color: white !important;
+}
+
+textarea::-moz-placeholder {
+    color: white !important;
+}
+
+textarea:-ms-input-placeholder {
+    color: white !important;
+}
+
 footer {
     width: 100%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     background-color: #262626;
     color: #b9b9b9;
-    height: 90px;
+    min-height: 90px;
+    position: absolute;
+    bottom: 0;
+}
+
+footer .coperight {
+    font-size: 16px;
+}
+
+footer .logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 25px;
+}
+
+footer .author {
+    font-size: 15px;
+}
+
+.author span {
+    color: #ff2b58;
+    font-weight: bold;
 }
 
 
